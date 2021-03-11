@@ -24,9 +24,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
 
     private TextView tv_rank, tv_title, tv_content, tv_link;
+    private TextView tv_keyword;
     private EditText et_search;
     private Button btn_search;
-    String[][] result_data = new String[20][3];
+//    String[][] result_data = new String[20][3];
     int rank = 1;
 
     private ArrayList<ResultData> arrayList;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private LinearLayoutManager linearLayoutManager;
 
-    List<Items> items = new ArrayList<>();
+//    List<Items> items = new ArrayList<>();
     NaverNewsApi naverNewsApi;
 
     int display = 20; // 보여지는 검색결과의 수
@@ -62,9 +63,15 @@ public class MainActivity extends AppCompatActivity {
         btn_search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // 초기화
                 rank = 1;
+                arrayList.clear();
+
                 et_search = (EditText)findViewById(R.id.et_search);
                 String keyword = et_search.getText().toString();
+                tv_keyword = (TextView)findViewById(R.id.tv_keyword);
+                tv_keyword.setText("검색어 : "+keyword);
+                tv_keyword.setVisibility(View.VISIBLE);
 
                 String clientID = "AINAdj8QhDDClfeZPneY";
                 String clientSecret = "DM8CS94a1s";
@@ -107,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-
+                et_search.setText("");
             }
         });
     }
