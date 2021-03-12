@@ -107,7 +107,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Result> call, Response<Result> response) {
                 if(!response.isSuccessful()) {
+                    // 아무 키워드도 쓰지 않았을 경우
                     Toast.makeText(MainActivity.this, "키워드를 입력하세요", Toast.LENGTH_SHORT).show();
+                    arrayList.clear();
+                    tv_keyword.setVisibility(View.INVISIBLE);
+                    mainAdapter.notifyDataSetChanged();
                     return;
                 }
 
