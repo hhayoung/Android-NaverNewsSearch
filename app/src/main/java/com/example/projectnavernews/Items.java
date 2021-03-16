@@ -2,6 +2,16 @@ package com.example.projectnavernews;
 
 import com.google.gson.annotations.SerializedName;
 
+/**
+    {
+        "title": "",
+        "originallink": "",
+        "link": "",
+        "description": "",
+        "pubDate": ""
+    },
+
+*/
 public class Items {
     @SerializedName("title")
     private String title;

@@ -28,15 +28,13 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv_keyword;
     private EditText et_search;
     private Button btn_search;
-//    String[][] result_data = new String[20][3];
-    int rank = 1;
+    int rank = 1; // 결과 개수 나타내기 위한 변수
 
-    private ArrayList<ResultData> arrayList;
+    private ArrayList<ResultData> arrayList; // 검색결과 담는 리스트
     private MainAdapter mainAdapter;
     private RecyclerView recyclerView;
     private LinearLayoutManager linearLayoutManager;
 
-//    List<Items> items = new ArrayList<>();
     private NaverNewsApi naverNewsApi;
 
     int display = 20; // 보여지는 검색결과의 수
@@ -70,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // 자판에서 엔터쳤을 때
         et_search.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
@@ -92,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
         tv_keyword.setText("검색어 : "+keyword);
         tv_keyword.setVisibility(View.VISIBLE);
 
+        // 네이버 API 키
         String clientID = "AINAdj8QhDDClfeZPneY";
         String clientSecret = "DM8CS94a1s";
 
@@ -136,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // 검색하고 나면 글자 지워지도록 처리
         et_search.setText("");
     }
 }

@@ -44,7 +44,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustomViewHold
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // 링크로 넘어가야 함.
+                // 링크로 넘어가도록 처리.
                 Context context = view.getContext();
                 String url = holder.tv_link.getText().toString();
 //                Log.e("url", url);
