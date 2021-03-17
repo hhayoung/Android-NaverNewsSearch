@@ -1,4 +1,4 @@
-package com.example.projectnavernews;
+package com.example.projectnavernews.widget;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.projectnavernews.R;
+import com.example.projectnavernews.model.ResultData;
 
 import java.util.ArrayList;
 

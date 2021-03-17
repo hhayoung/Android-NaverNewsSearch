@@ -1,4 +1,4 @@
-package com.example.projectnavernews;
+package com.example.projectnavernews.model;
 
 import com.google.gson.annotations.SerializedName;
 

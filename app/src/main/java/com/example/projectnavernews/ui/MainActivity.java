@@ -1,17 +1,23 @@
-package com.example.projectnavernews;
+package com.example.projectnavernews.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.projectnavernews.model.Items;
+import com.example.projectnavernews.widget.MainAdapter;
+import com.example.projectnavernews.http.NaverNewsApi;
+import com.example.projectnavernews.R;
+import com.example.projectnavernews.model.Result;
+import com.example.projectnavernews.model.ResultData;
 
 import java.util.ArrayList;
 import java.util.List;

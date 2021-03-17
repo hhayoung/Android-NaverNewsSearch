@@ -1,5 +1,6 @@
-package com.example.projectnavernews;
+package com.example.projectnavernews.model;
 
+import com.example.projectnavernews.model.Items;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;

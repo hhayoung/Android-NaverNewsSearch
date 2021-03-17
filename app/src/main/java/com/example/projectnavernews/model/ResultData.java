@@ -1,4 +1,4 @@
-package com.example.projectnavernews;
+package com.example.projectnavernews.model;
 
 public class ResultData {
     private String tv_rank;
